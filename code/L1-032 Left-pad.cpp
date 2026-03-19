@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    char c;
+    string s;
+    cin >> n >> c;
+    cin.ignore();
+    getline(cin, s);
+    int len = s.size();
+    if(n >= len) 
+    {
+        for(int i = 0; i < n - len; i ++) cout << c;
+        cout << s;
+    }
+    else 
+    {
+        for(int i = len - n; i < len; i ++) cout << s[i];
+    }
+    return 0;
+}
